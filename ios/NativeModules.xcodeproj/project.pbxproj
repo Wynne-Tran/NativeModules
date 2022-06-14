@@ -17,6 +17,7 @@
 		886281A02858134C00DC5FEB /* C_to_RN.c in Sources */ = {isa = PBXBuildFile; fileRef = 8862819F2858134C00DC5FEB /* C_to_RN.c */; };
 		886281A7285813C200DC5FEB /* C_to_RN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886281A6285813C200DC5FEB /* C_to_RN.swift */; };
 		886281AC285814C400DC5FEB /* C_to_RN.m in Sources */ = {isa = PBXBuildFile; fileRef = 886281AB285814C400DC5FEB /* C_to_RN.m */; };
+		886281B328581BF300DC5FEB /* ObjC_to_RN.m in Sources */ = {isa = PBXBuildFile; fileRef = 886281B228581BF300DC5FEB /* ObjC_to_RN.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		886281A5285813C100DC5FEB /* NativeModules-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeModules-Bridging-Header.h"; sourceTree = "<group>"; };
 		886281A6285813C200DC5FEB /* C_to_RN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_to_RN.swift; sourceTree = "<group>"; };
 		886281AB285814C400DC5FEB /* C_to_RN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = C_to_RN.m; sourceTree = "<group>"; };
+		886281B228581BF300DC5FEB /* ObjC_to_RN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjC_to_RN.m; sourceTree = "<group>"; };
+		886281B628581C0200DC5FEB /* ObjC_to_RN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjC_to_RN.h; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-NativeModules-NativeModulesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeModules-NativeModulesTests.release.xcconfig"; path = "Target Support Files/Pods-NativeModules-NativeModulesTests/Pods-NativeModules-NativeModulesTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -124,6 +127,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				886281B128581BB100DC5FEB /* ObjC_to_RN */,
 				8862819D2858133600DC5FEB /* C_to_RN */,
 				13B07FAE1A68108700A75B9A /* NativeModules */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -156,6 +160,15 @@
 				886281AB285814C400DC5FEB /* C_to_RN.m */,
 			);
 			path = C_to_RN;
+			sourceTree = "<group>";
+		};
+		886281B128581BB100DC5FEB /* ObjC_to_RN */ = {
+			isa = PBXGroup;
+			children = (
+				886281B228581BF300DC5FEB /* ObjC_to_RN.m */,
+				886281B628581C0200DC5FEB /* ObjC_to_RN.h */,
+			);
+			path = ObjC_to_RN;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -433,6 +446,7 @@
 			files = (
 				886281A7285813C200DC5FEB /* C_to_RN.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				886281B328581BF300DC5FEB /* ObjC_to_RN.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				886281AC285814C400DC5FEB /* C_to_RN.m in Sources */,
 				886281A02858134C00DC5FEB /* C_to_RN.c in Sources */,
