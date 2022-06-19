@@ -7,11 +7,8 @@ class SendCpp_to_RN : NSObject {
         return false
     }
   
-  
   @objc func fromCpp(_ successCallback: RCTResponseSenderBlock) -> Void {
-    successCallback([NSNull(), WrapCpp_to_RN().sayHello() as Any])
-    
+    successCallback([NSNull(), WrapCpp_to_RN().wrapSayHello() as Any])
     }
-  
 
 }

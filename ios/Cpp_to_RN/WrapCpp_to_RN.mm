@@ -4,7 +4,7 @@
 
 @implementation WrapCpp_to_RN
 
-- (NSString *) sayHello {
+- (NSString *) wrapSayHello {
   Cpp_to_RN fromCPP;
     std::string helloWorldMessage = fromCPP.sayHello();
     return [NSString
