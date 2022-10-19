@@ -10,12 +10,33 @@
 //https://medium.com/android-school/test-fcm-notification-with-postman-f91ba08aacc3
 //authorization: key=AAAANdQVYI0:APA91bFI5YGWLTF0Q241JT9rzbTUyDGHp4CcZHwpeQjWVQejS87tzTUDyulzEJ-1WXdShTv7y2e6Opkvohaxn_LDuBwS5bhnLz2XfQnPAcgjBkbO5expULF50gxfG_i1BaXrMgUUO4p5
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {StyleSheet, View, Button} from 'react-native';
 import notifee from '@notifee/react-native';
 import messaging from '@react-native-firebase/messaging';
 
 const App = () => {
+
+  const [token, setToken] = useState('');
+
+  const getFirebaseToken = async () => {
+    // Register the device with FCM
+    await messaging().registerDeviceForRemoteMessages();
+
+    // Get the token
+    const generatedToken = await messaging().getToken();
+
+    return generatedToken;
+  };
+
+  useEffect(() => {
+    async function fetchData() {
+      const generatedToken = await getFirebaseToken();
+      setToken(generatedToken);
+    }
+    fetchData();
+  }, []);
+
   const onDisplayRemoteNotification = async () => {
     const authStatus = await messaging().requestPermission();
     const enabled =
